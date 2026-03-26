@@ -25,8 +25,13 @@ fetchBtn.addEventListener("click", async () => {
       const el = document.createElement("div");
       el.className = "match";
       el.innerHTML = `
-        <strong>${match.battle.mode} - ${match.battle.map}</strong><br>
-        Brawler: ${match.battle.brawler.name} | Platzierung: ${match.battle.rank} | Sieg: ${match.battle.result === "victory" ? "✅" : "❌"}
+        <div>
+          <strong>${match.battle.mode} - ${match.battle.map}</strong><br>
+          Brawler: ${match.battle.brawler.name} | Platzierung: ${match.battle.rank}
+        </div>
+        <div class="${match.battle.result === "victory" ? 'win' : 'lose'}">
+          ${match.battle.result === "victory" ? "✅ Sieg" : "❌ Niederlage"}
+        </div>
       `;
       matchesDiv.appendChild(el);
     });
