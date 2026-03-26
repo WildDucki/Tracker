@@ -1,0 +1,4 @@
+body { font-family: Arial; max-width: 800px; margin: 20px auto; }
+input, button { padding: 5px; font-size: 16px; }
+button { cursor: pointer; }
+.match { border-bottom: 1px solid #ccc; padding: 5px 0; }
